@@ -1,0 +1,301 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="tic.css">
+    </head>
+    <body>
+        <center>
+            <h1 id="tic" class="head">Tic Tae Toe</h1>
+            <p><button id="time" class="a" onclick="game()">Start Game!</button></p>
+            <h2 id="hello" class="b">Welcome</h2>
+            <h1 id="yoo" class="c">Write Your Name</h1>
+            <p><input type="text" class="d"  id="tick1" placeholder="player1" ></p>
+             <p><input type="text" class="e" id="tick2" placeholder="player2"></p>
+             <button id="ke" class="f" onclick="go()">Go</button> <br>
+             <button onclick="reverse()"  id="rev" style="margin-left:-1080px; margin-top:-395px;color:white; background-color:red; border-color:white; border-radius:100px;">Back 
+                 <img src="arrow2-removebg-preview.png" style="width:14px; " alt="">
+                            </button>
+                    </center>
+     <center>   <table border="1"; id="thetable">
+            <tr>
+         <td><input type="button"  style="background-color:black; color:white;" id="game1" onclick="myfunc(event), won()" class="btn"></td>
+         <td><input type="button"  style="background-color:black; color:white;" id="game2"onclick="myfunc(event), won()"class="btn"></td>
+        <td><input type="button"  style="background-color:black; color:white;" id="game3"onclick="myfunc(event), won()"class="btn"> </td>
+           </tr>
+             <tr>
+           <td><input type="button"  style="background-color:black; color:white;" id="game4"onclick="myfunc(event), won()"class="btn"></td>
+           <td><input type="button"  style="background-color:black; color:white;" id="game5"onclick="myfunc(event), won()"class="btn"></td>
+            <td><input type="button"  style="background-color:black; color:white;" id="game6"onclick="myfunc(event), won()"class="btn"></td>
+                </tr>
+            <tr>
+              <td><input type="button"  style="background-color:black; color:white;" id="game7"onclick="myfunc(event), won()"class="btn"></td>
+              <td><input type="button"  style="background-color:black; color:white;" id="game8"onclick="myfunc(event), won()"class="btn"></td>
+              <td><input type="button"  style="background-color:black; color:white;" id="game9"onclick="myfunc(event), won()"class="btn"> </td>
+                  </tr>
+                              </table>
+                                        <br>
+           <button onclick="start()" class="g" id="quit">START
+                       </button>
+           <button onclick="stop()" id="restart"  style="background-color:red; border-radius:100px; border-color:white;margin-left:-800px; margin-bottom:-40px">End Game
+            </button> 
+                        <br>
+            <button onclick="cont()" id="span" style="background-color:green; margin-top:20px; border-radius:100px; border-color:white">
+                Continue
+            </button>
+           <button onclick="restarts()" id="cheat" style="background-color:yellow; border-radius:100px; border-color:white; margin-right:-800px;">Restart
+               </button>
+                                                                   </center>
+        <div id="rem" class="remst"></div>      
+     <div id="qtn" style="color:wheat; text-align:center;"></div>    
+        <button id="qtn1" style="margin-left:500px; background-color:green; border-color:white; border-radius:100px" onclick="ok()">YES
+                 </button>
+                            <br>
+           <button id="qtn2" onclick="ko()" style="margin-left:500px; background-color:red; border-color:white; border-radius:100px">NO
+                           </button>
+           <hr id="r">
+                <section style="margin-top:-500px;"> 
+                <table border="1" id="board" style="width:200px; height:120px; background-color:blue; border-color:blue">
+                    <tr> <td>SCORE BOARD</td></tr>
+                    <tr>    
+                        <td>
+                             <div id="jus" style="color:black"></div>
+                             <input type="text" id="score1" style="border-radius:100px; border-color:wheat" placeholder="00" disabled="disabled">
+                <div id="just" style="color:black">
+                        </div>
+                <input type="text"  style="border-radius:100px; border-color:wheat; " id="score2" placeholder="00" disabled="disabled">
+                           
+                <div id="kessie" style="color:aliceblue"> 
+                    <!--<li>joshua{110} vs james{10}</li>
+                    <li></li>-->
+                </div>
+                        </td>
+                    </tr>
+                </table>
+                </section>
+       <script>          
+              function game(){
+            hello.style.display ="block"
+            yoo.style.display ="block"
+            tick1.style.display ="block"
+            tick2.style.display ="block"
+            ke.style.display="block"
+            time.style.display="none"
+            rev.style.display="block"              
+ }               
+              function go(){
+            if (tick1.value == "" && tick2.value== ""){
+                 rem.innerHTML="please input your name!!"
+}
+            else{
+                thetable.style.display = "none"
+                hello.style.display ="none"
+                yoo.style.display ="none"
+                tick1.style.display ="none"
+                tick2.style.display ="none"
+                ke.style.display="none"
+                quit.style.display="block"
+            // cheat.style.display="block"
+                restart.style.display="none"
+                cheat.style.display="none"
+                rem.style.display="block"
+                rem.style.display="none"
+                rev.style.display="none"
+}
+}
+              function start(){
+                thetable.style.display="inline"
+                quit.style.display="none"
+                r.style.display="block"
+                jus.style.display="block"
+                score1.style.display="block"
+                just.style.display="block"
+                restart.style.display="block"
+                cheat.style.display="block"
+                score2.style.display="block"
+                jus.innerHTML=tick1.value;
+                just.innerHTML=tick2.value;
+                rev.style.display="none"
+                span.style.display="block"
+                board.style.display="block"
+                // if(game1.value == game2.value){
+                //    kessie.innerHTML="won"
+
+}
+              function reverse(){
+              tic.style.display="block"
+              hello.style.display="none"
+              yoo.style.display ="none"
+              tick1.style.display ="none"
+              tick2.style.display ="none"
+              rev.style.display="none"
+              ke.style.display="none"
+              time.style.display="block"
+              rem.style.display="none"
+}       
+             var mix=0;
+       function myfunc(e){
+             if(e.target.value == "" && mix==0){
+                e.target.value = 'x'
+                mix=1
+}
+            else if(e.target.value == 0 && mix==1)
+{
+                e.target.value = 'o'
+                mix="0"
+}
+}
+         function stop(){
+                qtn.style.display="block"
+                qtn.innerHTML="Are you sure you want to quit"
+                thetable.style.display="none"
+                qtn1.style.display="block"
+                qtn2.style.display="block"
+                 span.style.display="none"
+                 cheat.style.display="none"
+}
+        function ok(){
+             hello.style.display ="block"
+             yoo.style.display ="block"
+             tick1.style.display ="block"
+             tick2.style.display ="block"
+             ke.style.display="block"
+             cheat.style.display="none"
+             quit.style.display="none"
+             qtn1.style.display="none"
+             qtn2.style.display="none"
+             qtn.style.display="none"
+             restart.style.display="none"
+             jus.style.display="none"
+             score1.style.display="none"
+             just.style.display="none"
+             score2.style.display="none"
+             r.style.display="none"
+             tick1.value=""
+             tick2.value=""
+}
+         function ko(){
+             thetable.style.display="inline"
+             r.style.display="block"
+             jus.style.display="block"
+             score1.style.display="block"
+             just.style.display="block"
+             score2.style.display="block"
+             jus.innerHTML=tick1.value;
+             just.innerHTML=tick2.value;
+             qtn.style.display="none"
+             qtn2.style.display="none"
+             qtn1.style.display="none"
+}
+       function restarts(){
+            game1.value=""
+            game2.value=""
+            game3.value=""
+            game4.value=""
+            game5.value=""
+            game6.value=""
+            game7.value=""
+            game8.value=""
+            game9.value=""
+            score1.value=""
+            score2.value=""
+            kessie.style.display="none"
+}
+       function cont(){
+            game1.value=""
+            game2.value=""
+            game3.value=""
+            game4.value=""
+            game5.value=""
+            game6.value=""
+            game7.value=""
+            game8.value=""
+            game9.value=""
+            kessie.style.display="none"
+         if (kessie.innerHTML== "player x has won"){
+             
+             score1.value++;
+         }
+         else if (kessie.innerHTML== "player o has won"){
+             score2.value++
+             
+         }
+         
+       } 
+       function won(){
+            if(game1.value == 'x' && game2.value=='x' && game3.value=='x'){  
+            kessie.style.display="block";
+            kessie.innerHTML="player x has won"
+            
+        
+}
+            else if(game4.value == 'x' && game5.value=='x'&& game6.value=='x'){
+            kessie.style.display="block"
+            kessie.innerHTML="player x has won"
+            
+}
+            else if(game7.value == 'x' && game8.value=='x'&& game9.value=='x'){
+            kessie.style.display="block"
+            kessie.innerHTML="player x has won"
+}
+            else if(game1.value == 'o' && game2.value=='o' && game3.value=='o'){
+            kessie.style.display="block"
+            kessie.innerHTML="player o has won"
+}
+            else if(game4.value == 'o' && game5.value=='o' && game6.value=='o'){
+            kessie.style.display="block"
+            kessie.innerHTML="player o has won"
+}
+            else if(game4.value == 'o' && game5.value=='o' && game6.value=='o'){
+            kessie.style.display="block"
+            kessie.innerHTML="player o has won"
+}
+            else if(game1.value == 'x' && game5.value=='x' && game9.value=='x'){
+            kessie.style.display="block"
+            kessie.innerHTML="player x has won"
+}
+            else if(game3.value == 'x' && game5.value=='x' && game7.value=='x'){
+            kessie.style.display="block"
+            kessie.innerHTML="player x has won"
+}
+           else if(game1.value == 'o' && game5.value=='o' && game9.value=='o'){
+           kessie.style.display="block"
+           kessie.innerHTML="player o has won"
+}
+           else if(game3.value == 'o' && game5.value=='o' && game7.value=='o'){
+           kessie.style.display="block"
+           kessie.innerHTML="player o has won"
+}
+          else if(game1.value == 'x' && game4.value=='x' && game7.value=='x'){
+          kessie.style.display="block";
+          kessie.innerHTML="player x has won";
+}
+          else if(game2.value == 'x' && game5.value=='x' && game8.value=='x'){               
+          kessie.style.display="block";
+          kessie.innerHTML="player x has won";         
+}
+          else if(game3.value == 'x' && game6.value=='x' && game9.value=='x'){      
+          kessie.style.display="block";
+          kessie.innerHTML="player x has won";   
+}
+          else if(game1.value == 'o' && game2.value=='o' && game3.value=='o'){
+          kessie.style.display="block";
+          kessie.innerHTML="player o has won";           
+}
+          else if(game2.value == 'o' && game5.value=='o' && game8.value=='o'){                
+          kessie.style.display="block";
+          kessie.innerHTML="player o has won";  
+}
+          else if(game3.value == 'o' && game6.value=='o' && game9.value=='o'){               
+          kessie.style.display="block";
+          kessie.innerHTML="player o has won";   
+}
+
+       
+}
+                           </script>
+    </body>
+    </html>

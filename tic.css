@@ -1,0 +1,123 @@
+body{
+    background-color: salmon;
+}
+#tic{
+    font-weight: bold;
+    color: white
+}
+#time{
+    /*width: 20%;
+    height: 20%;*/
+    border-radius: 50px;
+    color: black
+}
+#hello{
+    display: none
+}
+#yoo{
+      display: none
+}
+#tick1{
+      display: none
+}
+#tick2{
+      display: none
+}
+#ke{
+      display: none
+}
+#thetable{
+      display: none;
+      width: 100px;
+      height: 100px;
+}
+#quit{
+      display: none
+}
+#restart{
+      display: none
+}
+#qtn{
+      display: none
+}
+#qtn1{
+      display: none;
+}
+#qtn2{
+      display: none;
+}
+#cheat{
+      display: none;
+}
+.btn{
+      width: 100px;
+      height: 100px;
+}
+#r{
+      display: none;
+}
+#jus{
+      display: none;
+}
+#score1{
+      display: none;
+}
+#just{
+      display: none;
+}
+#score2{
+      display: none;
+}
+#rev{
+      display: none;
+}
+.head{
+      margin-top: -10px;
+      font-size: 100px;
+}
+.a{
+      background-color: greenyellow;
+      border-color: white;
+      border-radius: 100px;
+}
+.b{
+      margin-top: -40px;
+      font-size: 50px;
+}
+.c{
+      font-style: italic;
+}
+.d{
+      border-radius: 100px;
+}
+.e{
+      border-radius: 100px;
+}
+.f{
+      background-color: orchid;
+      border-color: white;
+      border-radius: 100px;
+}
+#span{
+      display: none;
+}
+#board{
+      display: none;
+}
+.g{
+      background-color: cyan;
+      border-color: white;
+      border-radius: 100px;
+}
+.remst{
+      color: white;
+      font-style: italic;
+      margin-top: 320px;
+      /*margin: 0 0 o 200px;*/
+      text-align: center;
+      font-size: 40px;
+      
+}
+#kessie{
+      display: none;
+}
